@@ -1,0 +1,22 @@
+h3{
+	color: grey;
+	font-weight: lighter;
+	font-size: 30px;
+	text-align: center;
+	padding-top: 30px;
+}
+
+h1{
+	font-size: 40px;
+	margin-top: 30px;
+	color: #FF5964;
+	font-weight: normal;
+}
+
+.first{
+	margin-top: 35px;
+}
+
+h3:hover{
+	text-decoration: underline;
+}
