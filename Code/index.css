@@ -43,3 +43,20 @@ a:hover{
 	color: white;
 	text-decoration: underline;
 }
+
+.foto{
+	background-image: url("images/portret.png");
+	background-repeat: no-repeat;
+	height: 300px;
+	width: 265px;
+	margin: 0 auto;
+}
+
+.pIntroductie{
+	margin: 0 auto;
+}
+
+.introductie{
+	margin: 0 auto;
+	width: 80%;
+}
