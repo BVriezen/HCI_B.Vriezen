@@ -1,0 +1,116 @@
+.introductie{
+	width: 60%;
+	margin-top: 20px;
+}
+
+h5{
+	color: #FC5A67;
+	font-size: 20px;
+	margin-left: 48px;
+	margin-top: 68px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.tekstOnder{
+	width: 80%;
+	margin-top: 15px;
+	margin-bottom: 60px;
+	margin: 0 auto;
+}
+
+.tweeMedia{
+	display: flex;
+	justify-content: center;
+}
+
+/*Media voor vision*/
+.rondjes{
+	background-image: url(images/rondjes.png);
+	height: 400px;
+	width: 406px;
+	background-repeat: no-repeat;
+}
+
+.codeRondjes{
+	background-image: url(images/rondjesCoden.png);
+	height: 400px;
+	background-repeat: no-repeat;
+	width: 615px;
+	height: 400px;
+}
+
+/*//////////////////////////////////////////////////////////////////*/
+
+.hoeken{
+	background-image: url(images/hoeken.png);
+	height: 400px;
+	width: 510px;
+	background-repeat: no-repeat;
+}
+
+.codeHoeken{
+	background-image: url(images/codeHoeken.png);
+	height: 400px;
+	background-repeat: no-repeat;
+	width: 556px;
+	height: 400px;
+}
+
+/*//////////////////////////////////////////////////////////////////*/
+
+.hoeken{
+	background-image: url(images/hoeken.png);
+	height: 400px;
+	width: 510px;
+	background-repeat: no-repeat;
+}
+
+.codeBlok{
+	background-image: url(images/codeBlok.png);
+	height: 400px;
+	background-repeat: no-repeat;
+	width: 556px;
+	height: 400px;
+}
+
+/*//////////////////////////////////////////////////////////////////*/
+
+.groeneCirkel{
+	background-image: url(images/groenCirkel.png);
+	height: 192px;
+	width: 257px;
+	background-repeat: no-repeat;
+}
+
+.rodeNeus{
+	background-image: url(images/clownNeus.png);
+	height: 200px;
+	width: 257px;
+	background-repeat: no-repeat;
+}
+
+.codeRodeNeus{
+	background-image: url(images/codeRoodNeus.png);
+	height: 400px;
+	background-repeat: no-repeat;
+	width: 556px;
+	height: 400px;
+}
+
+/*//////////////////////////////////////////////////////////////////*/
+
+.hoeken{
+	background-image: url(images/hoeken.png);
+	height: 400px;
+	width: 510px;
+	background-repeat: no-repeat;
+}
+
+.codeBlok{
+	background-image: url(images/codeBlok.png);
+	height: 400px;
+	background-repeat: no-repeat;
+	width: 556px;
+	height: 400px;
+}
