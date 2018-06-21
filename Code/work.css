@@ -100,17 +100,9 @@ h5{
 
 /*//////////////////////////////////////////////////////////////////*/
 
-.hoeken{
-	background-image: url(images/hoeken.png);
+.gekkeKleuren{
+	background-image: url(images/gekkeKleuren.png);
 	height: 400px;
 	width: 510px;
 	background-repeat: no-repeat;
-}
-
-.codeBlok{
-	background-image: url(images/codeBlok.png);
-	height: 400px;
-	background-repeat: no-repeat;
-	width: 556px;
-	height: 400px;
 }
