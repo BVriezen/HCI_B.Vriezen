@@ -25,7 +25,15 @@ h5{
 }
 
 a{
-	color: yellow;
+	color: #3399FF;
+}
+
+a:hover{
+	color: #3399FF;
+}
+
+a:visited{
+	color: #3399FF;
 }
 
 /*Media voor vision*/
