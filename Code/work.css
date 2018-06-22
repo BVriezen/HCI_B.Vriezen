@@ -224,3 +224,54 @@ a:visited{
 	margin-top: 60px;
 	background-repeat: no-repeat;
 }
+
+/*Lab Weeks*/
+
+.zes{
+	margin-top: -49px;
+}
+
+.negen{
+	margin-top: -40px;
+}
+
+.extraSpace{
+	margin-top: 125px;
+}
+
+.dag3{
+	background-image: url(images/kopje.png);
+	height: 400px;
+	width: 680px;
+	margin-top: 70px;
+	background-repeat: no-repeat;
+}
+
+.dag4{
+	background-image: url(images/phial.png);
+	height: 400px;
+	width: 680px;
+	margin-top: 70px;
+	background-repeat: no-repeat;
+}
+
+.dag6{
+	background-image: url(images/glassBulb.png);
+	height: 400px;
+	width: 680px;
+	margin-top: 70px;
+	background-repeat: no-repeat;
+}
+
+.dag8{
+	background-image: url(images/sceneL.jpg);
+	height: 400px;
+	width: 320px;
+	margin-top: 70px;
+	background-repeat: no-repeat;
+}
+
+.reflectie{
+	margin-top: -75px;
+	padding-bottom: 20px;
+}
