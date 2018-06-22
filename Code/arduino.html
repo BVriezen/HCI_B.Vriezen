@@ -19,7 +19,10 @@
 		</nav>
 		<h1>Arduino </h1>
 		<p class="introductie">
-			Processing is een programma waarmee visuele effecten geprogrammeerd kunnen worden. Deze visuele effecten kunnen ook gekoppeld worden aan bepaalde interacties, een voorbeeld hiervan is een vierkant die van kleur verandert afhankelijk van waar de gebruiker zijn of haar muis houdt. Binnen de eerste workshop zijn er door mij een aantal opdrachten in processing gemaakt om kennis te maken met het programma. 
+			Arduino is een programma dat aangesloten kan worden op een elektronische bord waar draden, lampjes, knoppen en andere dingen aangesloten kunnen worden. Met het programma kunnen verschillende onderdelen op het bord programmeert worden, hier kunnen dan weer bepaalde interacties aan gekoppeld worden.
+			<br />
+			<br />
+			Niet alle opdrachten zijn binnen deze pagina terug te vinden, dit is gedaan omdat sommige opdrachten bepaalde interacties hadden die in verdere opdrachten zijn uitgewerkt. De uitgewerkte opdrachten zijn dus de opdrachten die binnen deze pagina te zien zijn. 
 		</p>
 
 		<div class="opdrachtDrie">
@@ -27,7 +30,7 @@
 			<div class="tweeMedia">
 				<div class="opdrachtdrie">
 					<video width="642" controls loop align="middle">
-  						<source src="arduino/blokKleur.mp4" type="video/mp4">
+  						<source src="arduino/opdrachtdrie.mp4" type="video/mp4">
   						<source src="mov_bbb.ogg" type="video/ogg">
   							Your browser does not support HTML5 video.
 					</video>
@@ -35,7 +38,13 @@
 				<div class="code3"></div>
 			</div>
 			<p class="tekstOnder">
-				Voor de eerste opdracht moesten er een aantal ellipsen getekend worden van verschillende groottes en kleuren. 
+				Bij deze opdracht was het de bedoeling dat er twee led lichtjes werden aangesloten die beiden konden oplichten afhankelijk van wat er binnen de code werd opgegeven. Het laatste deel binnen deze opdracht was om te zorgen dat de lichtjes aan en uit knipperen, waarbij één van de lichtjes twee keer zo snel moet knipperen als het andere lichtje. 
+				<br />
+				<br />
+				Binnen de code heb ik dit bewerkstelligt door elke lampje een INPUT te geven zodat ze door het systeem herkend worden en dat ze toe te passen zijn binnen de code. De lampjes zijn eerst aangegeven als pinMode en krijgen dan de OUTPUT van 13 of 12. Vervolgens wordt met HIGH en LOW aangegeven dat de lichtjes aan- en uitgaan. De delay geeft weer hoe lang het lampje duurt voordat het lichtje weer aan- en uitgaat. 
+				<br />
+				<br />
+				Om ervoor te zorgen dat één lampje twee keer zo snel zou knipperen als het andere lampje heb ik bij één lampje de delay om aan te gaan verhoogt. Hierdoor duurt het langer voordat het lampje weer gaat branden. Echter geeft het Arduino bord van zichzelf een soort vertraging waardoor de lampjes niet volledig syncroom met elkaar lopen. 
 			</p>
 		</div>
 
@@ -52,7 +61,16 @@
 				<div class="code4"></div>
 			</div>
 			<p class="tekstOnder">
-				De tweede opdracht was iets complexer in dat er verschillende figuren met verschillende posities gemaakt moesten worden.  Hierbij vond ik het lastig om figuren goed te positioneren omdat bepaalde figuren erg veel hoeken en punten hadden, waardoor het soms lastig was om te weten welk punt aangepast moest worden.  
+				Voor opdracht vier moesten er twee led lichtjes aangesloten worden op het bord dat in verbinding stond met de computer. Bij deze opdracht was het de bedoeling dat de lichtjes het tegenovergestelde gedrag zouden vertonen. Eén van de lichtjes moest namelijk feller worden terwijl het andere lichtje juist moest dimmen. Eén lampje ging dus langzaamaan terwijl het andere lichtje langzaam uitging. 
+				<br />
+				<br />
+				Om dit voor elkaar te kunnen krijgen moesten er eerst INPUTS gegeven worden aan beide lampjes. Dit is gedaan doormiddel van pinMode (redLed of yellowLed gevolgd door OUTPUT). Dit zorgt ervoor dat de lampjes herkend worden en dat ze een OUTPUT krijgen, met OUTPUT wordt in dit geval bedoeld dat de lichtjes instaat zijn om licht af te geven. 
+				<br />
+				<br />
+				Vervolgens is binnen de void loop een if statement gegeven om te bepalen hoe de lichtjes zich zullen gedragen. Bij de eerste if statement is te zien dat de brightness op 0 begint en deze toeneemt tot 255, dit is gevolgd door brightness++ om aan te geven dat de felheid moet toenemen. Dit lichtje is dus uit en wordt langzaam steeds feller naarmate tijd vordert, dit is tot het maximumpunt van 255, het punt waarop het lichtje het felst schijnt.
+				<br />
+				<br />
+				Bij de andere code is het juist tegenovergesteld, het lichtje begint op 255 en gaat naar 0. Bij brightness is ook te zien dat er in plaats van ++ -- staat. Dit lampje begint dus op het felst en wordt langzaam steeds minder fel totdat het uiteindelijk uitgaat. 
 			</p>
 		</div>
 
@@ -69,13 +87,22 @@
 				<div class="code6"></div>
 			</div>
 			<p class="tekstOnder">
-				Voor de derde opdracht heb ik een line gemaakt die langer wordt naarmate de muis verder van het beginpunt van de lijn af beweegt. Ook heeft dit invloed op de kleur van het vierkant.  
+				Bij opdracht zes is er gebruik gemaakt van een Potentiometer, een soort draaiknop die op verschillende posities gedraaid kan worden. Het doel van de opdracht was om een doormiddel van de potentiometer de hoeveelheid licht die twee led lichtjes uitschijnen te controleren. Hierbij was het de bedoeling dat de lichtjes tegenover gesteld van elkaar zouden werken. As één lichte feller werd, moest het andere lampje juist dimmen. Dit hing dan weer af van hoe de potentiometer werd gedraaid, met de klok mee of tegen de klok in. 
+				<br />
+				<br />
+				Om tot dit resultaat te komen moest ik eerst een variabele maken voor de waardes vanuit de potentiometer en voor de meter zelf. Dit is gedaan float sensorValue, en int sensorPin te gebruiken. Voor de twee lichtjes is ook een variabele gemaakt doormiddel van int gevolgd door de naam van het lichtje. 
+				<br />
+				<br />
+				Om de potentiometer te kunnen gebruiken is er aan sensorPin een INPUT waarde gegeven zodat deze een INPUT geeft in de vorm van een waarde. Voor de lampjes is er een OUTPUT gegeven zodat er iets met de INPUT van Waardes gedaan kan worden. 
+				<br />
+				<br />
+				Vervolgens is er een serial.print gegeven om te testen of de potentiometer ook een waarde geeft. Dit is binnen de serial monitor te zien in de vorm van een cijfer. Onderaan de code is te zien dat sensorValue een berekening uitvoert waardoor er een waarde van tussen de 0 en 255 uitkomt. Deze waarde geeft de mate van felheid van een lichtje weer, 0 betekent dat het lichtje uit is en 255 betekent dat het lichtje op zijn felst schijnt. Hierbij krijgt het rode lichtje (redLed) de waarde mee van de sensorValue, het lichtje brandt dus net zo fel als de sensorwaarde. Het gele lichtje (yellowLed) krijgt een vaste waarde van 255 mee en de sensorwaarde wordt hiervan afgetrokken. Dit lampje wordt dus minder fel naarmate de sensorwaarde groter is. 
 			</p>
 		</div>
 
 		<div class="opdrachtZeven">
 			<h5>Assignment 7</h5>
-			<div class="tweeMedia">
+			<div class="tweeMedia wrap">
 				<div>
 					<div class="opdrachtzeven">
 						<video width="642" controls loop align="middle">
@@ -84,59 +111,98 @@
   							Your browser does not support HTML5 video.
 					</video>
 					</div>
-					<div class="code7"></div>
-				</div>	
-				<div class="codeRodeNeus"></div>
-			</div>
+				</div>
+				<div class="code7"></div>	
 			<p class="tekstOnder">
-				Bij de vierde opdracht is gebruik gemaakt van een camera en een processing code waarmee verschillende delen van het gezicht kunnen worden geregistreerd. Hierbij moest ik een aanpassing maken waardoor er om het gezicht van de persoon een groen cirkel kwam. In de opdracht die daarna volgde was het de bedoeling om een rode clownsneus op de neus van de persoon te laten verschijnen. 
+				Opdracht zeven heeft te maken met het gebruik van een lichtsensor. Eerst is er een koppeling gelegd tussen twee led lampjes en de lichtsensor. Het doel was om ervoor te zorgen dat de led lampjes in een zekere mate zouden oplichten afhankelijk van hoeveel licht de sensor opving. Als er dus weinig licht was zouden de lampjes bijna niet oplichten, als er veel licht was zouden de lampjes juist wel fel oplichten. 
+				<br />
+				<br />
+				Om dit voor elkaar te kunnen krijgen zijn er eerst twee variabelen voor de lichtjes aangemaakt doormiddel van int gevolgd door yellowLed of redLed en een nummer. Vervolgens is aan de lampjes een OUPUT gegeven zodat de lampjes ook echt kunnen oplichten. Voor de sensorPIn (de sensor) is een INPUT gegeven zodat de waardes gemeten door de sensor binnen komen. Daarna is er voor de sensorValue, de waardes die binnen komen via de sensor een analogRead aangemaakt zodat de gemeten waardes gebruikt kunnen worden. 
+				<br />
+				<br />
+				Bij het stukje van de Serial Print is een koppeling gemaakt naar de serial monitor waar gekeken kan worden of er ook echt licht gemeten wordt door de sensor. Deze waardes zijn dan als nummers te zien. 
+				<br />
+				<br />
+				Om de waardes vanuit de sensor toe te kunnen passen om de lichtjes moest erbij de sensorReading een variable aangemaakt worden, dit is gedaan in de vorm van val. Op het eind van de code is analogWrite bij de lichtjes en de val waarde gegeven om zo te zorgen dat er een OUTPUT plaats vindt, oftewel dit zorgt ervoor dat de lichtjes oplichten of dimmen. 
 			</p>
+		</div>
 		</div>
 
 		<div class="opdrachtAcht">
 			<h5>Assignment 8</h5>
 			<div class="opdrachtacht">
 				<video width="642" controls loop align="middle">
-  						<source src="arduino/opdrachtacht.mp4" type="video/mp4">
+  						<source src="arduino/oefeningacht.mp4" type="video/mp4">
   						<source src="mov_bbb.ogg" type="video/ogg">
   							Your browser does not support HTML5 video.
 					</video>
 			</div>
 			<p class="tekstOnder">
-				Voor de laatste opdracht is gebruik gemaakt van een al bestaande code die doormiddel van de camera in een laptop kleuren kan registreren. Bij deze opdracht ben ik er met code niet hellemaal uitgekomen, ik heb dus niet een extra interactie toegevoegd. In plaats daarvan heb ik het uiterlijk van de weergave van de camera veranderd. Eerst heb ik binnen de code de int rangeWidth waarde groter gemaakt waardoor de camera meer kleuren registreert. Vervolgens heb ik bij opencv.useColor(); een nummer toegevoegd waardoor alles een soort psychedelische kleur krijgt. Binnen deze opdracht heb ik niet de code gegeven omdat deze erg lang is en omdat ik slechts twee kleine aanpassingen heb gedaan binnen de code. 
+				Binnen opdracht acht was het de bedoeling om naast het Arduino bord ook gebruik te maken van een programma genaamd processing. Processing kan gebruikt worden om allerlei interacties te maken die vaak een visueel effect hebben. Bijvoorbeeld een rondje dat groter of kleiner wordt afhankelijk waarvan de muis zich binnen het scherm bevindt. 
+				<br />
+				<br />
+				Bij de opdracht heb ik gebruik gemaakt van de bestaande opzet van opdracht zeven. De input die gebruikt werd was dus de hoeveelheid licht die op de sensor viel. Hierbij is verbinding gemaakt naar processing toe die deze input naar zich toegestuurd kreeg. 
+				<br />
+				<br />
+				Het was binnen de opdracht de bedoeling om iets met deze input te doen en in processing een soort interactie/verandering weer te geven afhankelijk van hoeveel licht de sensor opving. Er was al een bestaande code voor processing geven om te testen of de link met de sensor en processing werkte. Vervolgens heb ik toen deze code aangepast door het bestaande figuur aan te passen naar een vierkant in plaats van een cirkel. Vervolgens heb ik het figuur een extra hoek gegeven door nog een float(sensorReading) toe te voegen. Hiermee zeg je eigenlijk dat er nog een hoek van het figuur afhankelijk is van wat de sensor opvangt. Ik heb nog geprobeerd om een effect met kleuren te maken, maar ik kreeg dat niet werkend. Heb er toen maar voor gekozen om het simpel te houden. 
 			</p>
 		</div>
 
 		<div class="opdrachtNegen">
 			<h5>Assignment 9</h5>
-			<div class="opdrachtnegen"></div>
+			<div class="tweeMedia wrap">
+			<div class="opdrachtnegen">
 			<video width="642" controls loop align="middle">
   						<source src="arduino/opdrachtnegen.mp4" type="video/mp4">
   						<source src="mov_bbb.ogg" type="video/ogg">
   							Your browser does not support HTML5 video.
 					</video>
-				<div class="code9"></div>
+			</div>
+			<div class="code9"></div>
 			<p class="tekstOnder">
-				Voor de laatste opdracht is gebruik gemaakt van een al bestaande code die doormiddel van de camera in een laptop kleuren kan registreren. Bij deze opdracht ben ik er met code niet hellemaal uitgekomen, ik heb dus niet een extra interactie toegevoegd. In plaats daarvan heb ik het uiterlijk van de weergave van de camera veranderd. Eerst heb ik binnen de code de int rangeWidth waarde groter gemaakt waardoor de camera meer kleuren registreert. Vervolgens heb ik bij opencv.useColor(); een nummer toegevoegd waardoor alles een soort psychedelische kleur krijgt. Binnen deze opdracht heb ik niet de code gegeven omdat deze erg lang is en omdat ik slechts twee kleine aanpassingen heb gedaan binnen de code. 
+				Voor opdracht negen moest er doormiddel van twee knoppen een led lichtje worden bestuurd. De laatste opdracht was om te zorgen dat als één knopje ingedrukt werd het lichtje zou oplichten, maar niet als de twee knoppen tegelijkertijd ingedrukt worden. 
+				<br />
+				<br />
+				Om dit te kunnen maken moest binnen de code eerste het lampje en de twee knoppen aangemaakt/herkend worden. Dit is gedaan doormiddel van int gevolgd door het lampje: ledPin,  en de twee knoppen: buttonPinL en buttonPinR. 
+				<br />
+				<br />
+				Om te zorgen dat het lampje schijnt is er een OUTPUT gegeven. Om te herkennen dat de knopjes ingedrukt worden is er een INPUT voor beiden knoppen gegeven. Binnen de voidloop is digitalRead toegevoegd om een state aan de INPUT te kunnen koppelen. Een state is nodig om iets te kunnen doen met de INPUT. 
+				<br />
+				<br />
+				Vervolgens zijn er een aantal IF statements waarbinnen wordt gezegd wat er gebeurd als één van de twee knoppen HIGH en LOW zijn. Oftewel als één van de twee knoppen ingedrukt wordt en de ledPin HIGH wordt waardoor deze oplicht. De derde IF statement gaat erover dat als beide knoppen HIGH zijn het lichtje niet oplicht. De vierde geeft aan dat als beide knoppen een waarde van LOW hebben dat het lichtje niet oplicht, er wordt namelijk geen knop ingedrukt. 
 			</p>
+		</div>
 		</div>
 
 		<div class="opdrachtTien">
 			<h5>Assignment 10</h5>
-			<div class="opdrachttien"></div>
+			<div class="tweeMedia wrap">
+			<div class="opdrachttien"><
 			<video width="642" controls loop align="middle">
   						<source src="arduino/opdrachttien.mp4" type="video/mp4">
   						<source src="mov_bbb.ogg" type="video/ogg">
   							Your browser does not support HTML5 video.
 					</video>
+				</div>
 			<div class="code10"></div>
 			<p class="tekstOnder">
-				Voor de laatste opdracht is gebruik gemaakt van een al bestaande code die doormiddel van de camera in een laptop kleuren kan registreren. Bij deze opdracht ben ik er met code niet hellemaal uitgekomen, ik heb dus niet een extra interactie toegevoegd. In plaats daarvan heb ik het uiterlijk van de weergave van de camera veranderd. Eerst heb ik binnen de code de int rangeWidth waarde groter gemaakt waardoor de camera meer kleuren registreert. Vervolgens heb ik bij opencv.useColor(); een nummer toegevoegd waardoor alles een soort psychedelische kleur krijgt. Binnen deze opdracht heb ik niet de code gegeven omdat deze erg lang is en omdat ik slechts twee kleine aanpassingen heb gedaan binnen de code. 
+				Binnen opdracht 10 moest er met een servo zelf een soort ritme/patroon worden gemaakt dat de servo uitvoert. Een servo is in dit geval een soort flippertje of spinnertje dat op een roterend stuk gezet kan worden. Het flippertje moest dus draaien in een zeker patroon.
+				<br />
+				<br />
+				Vooraf was er al een basis code gegeven om te testen of de servo zou draaien. Ik heb deze code aangepast en zelf nog een aantal regels toegevoegd om een meer complex patroon te krijgen voor de servo. 
+				<br />
+				<br />
+				Binnen de code is de eerste regel, include Servo.h, dit zorgt ervoor dat het systeem de servo ook daadwerkelijk herkent. De volgende regels gaat over het toevoegen van een variabele aan de servo zodat deze aangesproken kan worden, dit wordt gedaan doormiddel van int servoPin  = 9, de beginpositie van de servo is bepaald door Int pos. 
+				<br />
+				<br />
+				De statements die dan volgen hebben te maken met posities waar de servo naar toe beweegt. Bij elke for statement wordt dus een positie aangeven waar de servo naar toe- of van af beweegt.  
 			</p>
+		</div>
 		</div>
 
 		<div class="opdrachtElf">
 			<h5>Assignment 11</h5>
+			<div class="tweeMedia">
 			<div class="opdrachtelf">
 				<video width="642" controls loop align="middle">
   						<source src="arduino/opdrachtelf.mp4" type="video/mp4">
@@ -145,13 +211,21 @@
 					</video>
 			</div>
 			<div class="code11"></div>
+			</div>
 			<p class="tekstOnder">
-				Voor de laatste opdracht is gebruik gemaakt van een al bestaande code die doormiddel van de camera in een laptop kleuren kan registreren. Bij deze opdracht ben ik er met code niet hellemaal uitgekomen, ik heb dus niet een extra interactie toegevoegd. In plaats daarvan heb ik het uiterlijk van de weergave van de camera veranderd. Eerst heb ik binnen de code de int rangeWidth waarde groter gemaakt waardoor de camera meer kleuren registreert. Vervolgens heb ik bij opencv.useColor(); een nummer toegevoegd waardoor alles een soort psychedelische kleur krijgt. Binnen deze opdracht heb ik niet de code gegeven omdat deze erg lang is en omdat ik slechts twee kleine aanpassingen heb gedaan binnen de code. 
+				Voor opdracht elf was het de bedoeling dat doormiddel van twee knoppen een servo naar links of rechts toe kan bewegen. Om de servo aan te kunnen sturen doormiddel van de knoppen moet eerst het indrukken van de knoppen worden registreert. Dit wordt gedaan doormiddel van de pinMode (buttonStateL of buttonStateR) die registreert om welke knop het gaat, dit is gevolgd door de INPUT die aangeeft dat de knop ingedrukt wordt. 
+				<br />
+				<br />
+				De eerste twee ifs zorgen ervoor dat de servo’s tot een bepaald punt kunnen draaien en daarna niet verder. Bij eerste kan servo niet verder draaien dan punt 159 en bij de andere kan deze niet verder terugdraaien dan punt 21. 
+				<br />
+				<br />
+				De volgende set van if statements gaan over wat er gebeurd als er een knop ingedrukt wordt. Het eerste stukje binnen de code gaat over HIGH & LOW, dit heeft ermee te maken welke knop is ingedrukt. Het volgende stukje gaat over de huidige positie en het draaien. Hierbij wordt er steeds + 2 of -2 gegeven aan de positie, dit zorgt er dus voor dat de positie van servos opschuift en daarmee veranderd. 
 			</p>
 		</div>
 
 		<div class="opdrachtTwaalf">
 			<h5>Assignment 12</h5>
+			<div class="tweeMedia wrap">
 			<div class="opdrachttwaalf">
 				<video width="642" controls loop align="middle">
   						<source src="arduino/opdrachttwaalf.mp4" type="video/mp4">
@@ -161,12 +235,22 @@
 			</div>
 			<div class="code12"></div>
 			<p class="tekstOnder">
-				Voor de laatste opdracht is gebruik gemaakt van een al bestaande code die doormiddel van de camera in een laptop kleuren kan registreren. Bij deze opdracht ben ik er met code niet hellemaal uitgekomen, ik heb dus niet een extra interactie toegevoegd. In plaats daarvan heb ik het uiterlijk van de weergave van de camera veranderd. Eerst heb ik binnen de code de int rangeWidth waarde groter gemaakt waardoor de camera meer kleuren registreert. Vervolgens heb ik bij opencv.useColor(); een nummer toegevoegd waardoor alles een soort psychedelische kleur krijgt. Binnen deze opdracht heb ik niet de code gegeven omdat deze erg lang is en omdat ik slechts twee kleine aanpassingen heb gedaan binnen de code. 
+				Voor deze opdracht moest er een speaker op het breadbord aangesloten worden dat bepaalde frequenties binnen de code kan omzetten naar geluid. De speaker bestaat uit twee metalen plaatsjes die kunnen vibreren waardoor er geluid genereerd wordt. Doormiddel van code kunnen de verschillende tonen worden opgegeven die afgespeeld worden door de speaker. 
+				<br />
+				<br />
+				Voor deze opdracht werd al een bestaande code gegeven om een basis deuntje af te spelen en om te kijken of alle aansluiting met betrekking tot draden en resistors werken. Deze bestaande code heb ik vervolgens aangepast om zo een eigen deuntje te maken. Om te bepalen welke tonen ik wou heb ik gebruik gemaakt van de het overzicht van de tonen en welke akkoorden dit zijn. Deze zat bijgevoegd bij de opdracht. Mijn deuntje als voorbeeld bestaat uit: 
+				<br />
+				<br />
+				d4, d4, g4, g4, a4, b4, b4
+				<br />
+				<br />
+				Om te behalen hoeveel tussentijd van stilte tussen de tonen zit heb ik gebruik gemaakt van de delay. Dit geeft aan hoeveel milliseconden ruimte ertussen moet zitten voordat de volgende toon begint
 			</p>
+		</div>
 		</div>
 
 		<div class="opdrachtDertien">
-			<h5>Assignment 13</h5>
+			<div class="tweeMedia">
 			<div class="opdrachtdertien">
 				<video width="642" controls loop align="middle">
   						<source src="arduino/opdrachtdertien.mp4" type="video/mp4">
@@ -174,10 +258,19 @@
   							Your browser does not support HTML5 video.
 					</video>
 			</div>
-			<div class="code13"></div>
-			<p class="tekstOnder">
-				Voor de laatste opdracht is gebruik gemaakt van een al bestaande code die doormiddel van de camera in een laptop kleuren kan registreren. Bij deze opdracht ben ik er met code niet hellemaal uitgekomen, ik heb dus niet een extra interactie toegevoegd. In plaats daarvan heb ik het uiterlijk van de weergave van de camera veranderd. Eerst heb ik binnen de code de int rangeWidth waarde groter gemaakt waardoor de camera meer kleuren registreert. Vervolgens heb ik bij opencv.useColor(); een nummer toegevoegd waardoor alles een soort psychedelische kleur krijgt. Binnen deze opdracht heb ik niet de code gegeven omdat deze erg lang is en omdat ik slechts twee kleine aanpassingen heb gedaan binnen de code. 
-			</p>
+			<div>
+				<h5>Assignment 13</h5>
+				<p class="tekstOnder">
+					De laatste opdracht bestond uit het toepassen en gebruiken van een accelerometer. Een accelerometer kunnen verschillende zijden van rotatie meten, bijvoorbeeld het kantelen van de voorkant en zijkant van het bord. Hierbij bestond de laatste opdracht uit het toevoegen van code aan een al bestaande code. De bestaande code kon gebruikt worden om het kantelen van het bord te meten. Aan de code moest ik zelf nog code toevoegen en op het bord moest een speaker geplaatst worden. Deze speaker moest doormiddel van geluid feedback geven als het bord precies horizontaal ligt, de opdracht was dus om een waterpas te maken.
+					<br />
+					<br />
+					Hoewel ik heb geprobeerd dit te maken, ben ik er helaas niet uitgekomen. Ik heb ook nog gevraagd aan een medestudent of ik zijn code kon inzien omdat het hem wel was gelukt. Deze code heb ik toen overgenomen, maar bij mij werkte het niet goed. Waarschijnlijk heeft dit ermee te maken dat mijn bord niet goed wil kalibreren, ik heb meerdere malen geprobeerd goed te kalibreren, maar dit hielp niet. 
+					<br />
+					<br />
+					Zoals het nu is, gaat de speaker alleen af als het bord wordt opgestart, daarna kapt de speaker ermee. Uiteindelijk heb ik gekozen om het zo te laten in verband met de toen aankomende deadlines. 
+				</p>
+			</div>
+		</div>
 		</div>
 
 	</body>

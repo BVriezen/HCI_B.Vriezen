@@ -139,65 +139,70 @@ a:visited{
 
 /*Arduino*/
 
+.wrap{
+	flex-wrap: wrap;
+}
+
 .code3{
-	background-image: url(images/gekkeKleuren.png);
+	background-image: url(arduino/c3.png);
 	height: 400px;
 	width: 510px;
 	background-repeat: no-repeat;
 }
 
 .code4{
-	background-image: url(images/gekkeKleuren.png);
+	background-image: url(arduino/c4.png);
 	height: 400px;
 	width: 510px;
 	background-repeat: no-repeat;
 }
 
 .code6{
-	background-image: url(images/gekkeKleuren.png);
+	background-image: url(arduino/c6.png);
 	height: 400px;
 	width: 510px;
 	background-repeat: no-repeat;
 }
 
 .code7{
-	background-image: url(images/gekkeKleuren.png);
+	background-image: url(arduino/c7.png);
 	height: 400px;
 	width: 510px;
 	background-repeat: no-repeat;
 }
 
 .code9{
-	background-image: url(images/gekkeKleuren.png);
+	background-image: url(arduino/c9.png);
 	height: 400px;
 	width: 510px;
 	background-repeat: no-repeat;
 }
 
 .code10{
-	background-image: url(images/gekkeKleuren.png);
+	background-image: url(arduino/c10.png);
 	height: 400px;
 	width: 510px;
 	background-repeat: no-repeat;
 }
 
 .code11{
-	background-image: url(images/gekkeKleuren.png);
+	background-image: url(arduino/c11.png);
 	height: 400px;
 	width: 510px;
 	background-repeat: no-repeat;
 }
 
 .code12{
-	background-image: url(images/gekkeKleuren.png);
+	background-image: url(arduino/c12.png);
 	height: 400px;
 	width: 510px;
 	background-repeat: no-repeat;
 }
 
-.code13{
-	background-image: url(images/gekkeKleuren.png);
-	height: 400px;
-	width: 510px;
-	background-repeat: no-repeat;
+.opdrachtDertien{
+	margin-top: 68px;
+}
+
+.opdrachtacht>video{
+	margin-left: 25%;
 }
