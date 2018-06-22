@@ -275,3 +275,51 @@ a:visited{
 	margin-top: -75px;
 	padding-bottom: 20px;
 }
+
+/*VR/AR*/
+
+.voorbeeld1{
+	background-image: url(images/trein.png);
+	height: 400px;
+	width: 605px;
+	margin-top: 70px;
+	background-repeat: no-repeat;
+}
+
+.voorbeeld2{
+	background-image: url(images/dino.jpg);
+	height: 400px;
+	width: 605px;
+	margin-top: 70px;
+	background-repeat: no-repeat;
+}
+
+.voorbeeld3{
+	background-image: url(images/naald.svg);
+	height: 400px;
+	width: 500px;
+	margin-top: 70px;
+	background-repeat: no-repeat;
+}
+
+/*Wearables*/
+
+.voorbeeld4{
+	background-image: url(images/armband.svg);
+	height: 400px;
+	width: 500px;
+	margin-top: 70px;
+	background-repeat: no-repeat;
+}
+
+.voorbeeld5{
+	background-image: url(images/klok.svg);
+	height: 400px;
+	width: 500px;
+	margin-top: 70px;
+	background-repeat: no-repeat;
+}
+
+.extrsHeight{
+	margin-top: 130px;
+}
