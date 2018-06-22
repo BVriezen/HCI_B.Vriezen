@@ -206,3 +206,30 @@ a:visited{
 .opdrachtacht>video{
 	margin-left: 25%;
 }
+
+/*Excursie*/
+
+.af2{
+	background-image: url(images/excursieObject.jpg);
+	height: 400px;
+	width: 200px;
+	background-repeat: no-repeat;
+}
+
+.af1{
+	background-image: url(images/excursieMij1.jpg);
+	height: 500px;
+	background-repeat: no-repeat;
+}
+
+.wrap2{
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.afbeeldingen{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	margin: 20px;
+}
